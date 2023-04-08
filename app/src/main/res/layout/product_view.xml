@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="300dp"
-    android:layout_height="100dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="340dp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
     android:background="#C6BED6"
     android:orientation="vertical">
@@ -14,24 +15,46 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="500dp"
+            android:layout_width="520dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/productTextView"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
                 android:text="Tuote"
                 android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/productInfoTextView"
+            <EditText
+                android:id="@+id/editProductNameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Muokkaa tuotetta"
+                android:inputType="textPersonName"
+                android:textSize="1sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/productInfoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
                 android:text="LisäTietoja"
                 android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editProductInfoEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Muokkaa tietoja"
+                android:inputType="textPersonName"
+                android:textSize="1sp"
+                android:visibility="invisible" />
 
         </LinearLayout>
 
@@ -41,19 +64,17 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/productEditButton"
+            <ImageView
+                android:id="@+id/imgEdit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/baseline_edit_24" />
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_edit_24" />
 
-            <ImageButton
-                android:id="@+id/productDeleteButton"
+            <ImageView
+                android:id="@+id/imgRemove"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/delete" />
+                android:layout_height="50dp"
+                android:src="@drawable/delete" />
         </LinearLayout>
 
     </LinearLayout>

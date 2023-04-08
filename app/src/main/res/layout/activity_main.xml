@@ -12,16 +12,37 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
-        android:text="Add product"
+        android:onClick="addProduct"
+        android:text="Lisää tuote"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productRV"
-        android:layout_width="409dp"
-        android:layout_height="661dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addProduct" />
+
+    <ImageView
+        android:id="@+id/TimeSortImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/productRV"
+        app:layout_constraintStart_toEndOf="@+id/addProduct"
+        app:srcCompat="@drawable/baseline_calendar_month_24" />
+
+    <ImageView
+        android:id="@+id/alphabeticalSortImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/productRV"
+        app:layout_constraintStart_toEndOf="@+id/TimeSortImageView"
+        app:srcCompat="@drawable/baseline_sort_by_alpha_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
